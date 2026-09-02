@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Vehicle Registration</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(206, 246, 253);
+        }
+
+        h2 {
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+        }
+
+        input {
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgb(0, 0, 0);
+            font-size: 25px;
+            margin-bottom: 1px;
+        }
+
+        button {
+            background-color: rgb(5, 5, 153);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding: 5px;
+        }
+    </style>
+    <script src="VehicleScript.js"></script>
+</head>
+<body>
+    <h2>VehicleIndia App</h2>
+    <label>Enter Your Vehicle Registration Number</label><br><br>
+    <input type="text" id="regid" placeholder="XX00XX0000">
+    <br><br>
+    <button onclick="checkRegId();">Register</button>
+    <br><br>
+    <hr>
+    <div id="output"></div>
+    <h3>Designed by Arunima Das, PRN: 24070521007</h3>
+</body>
+</html>

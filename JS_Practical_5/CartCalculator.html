@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart Calculator</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .header {
+            background-color: rgb(233, 204, 39);
+            box-sizing: border-box;
+            margin-top: 0px;
+            align-content:center;
+            padding: 5px;
+            text-align: center;
+            border-radius: 5px;
+            color: rgb(90, 134, 230);
+        }
+
+        .card {
+            margin-top: 30px;
+            background-color: rgb(49, 49, 180);
+            border-radius: 15px;
+            padding: 10px 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        input {
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: rgb(233, 204, 39);
+            margin-left: 20px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease, 
+        }
+
+        button:hover {
+            background-color: rgb(204, 175, 8);
+            transform: scale(1.05);
+        }
+        
+        table {
+            margin-left: 200px;
+            width: 75%;
+            margin-top: 30px;
+        }
+
+        th {
+            background-color: rgb(233, 204, 39);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Shopping Cart Calculator</h2>
+    </div>
+    <div class="card">
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="quantity" placeholder="Quantity">
+        <button onclick = "addToCart();">Add Product</button>
+
+        <table id="cartTable">
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        </table>
+    </div>
+
+    <div class="result" id="result"></div>
+    <h3>Summary</h3>
+    <ul id="summary"></ul>
+    <h3>Expensive Products</h3>
+    <ul id="expensive"></ul>
+    <script src="\CartScript.js"></script>
+    <br><br>
+    <h3>Designed By: Arunima Das, PRN: 24070521007</h3>
+</body>
+</html>

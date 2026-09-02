@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Form for Student Information</title>
+        <style>
+            .header {
+                margin-top: 0px;
+                height: 140px;
+                align-self: center;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color:crimson;
+                text-align: center;
+                background-color: rgb(219, 203, 203);
+            }
+
+            .form {
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 60px;
+                background-color: rgb(146, 136, 136);
+                border-radius: 20px;
+                padding: 30px;
+                
+                .label {
+                    font-size: 25px;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+                .button {
+                    size: 25px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                }
+
+                .input {
+                border-radius: 10px;
+                font-size: 20px;
+            }
+            }
+            
+            .input {
+                border-radius: 10px;
+                font-size: 20px;
+            }
+
+            .output {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-color: rgb(218, 194, 165);
+            }
+
+        </style>
+        <script>
+            function welcomeStudent() {
+                let name = document.getElementById("name").value;
+                let age = document.getElementById("age").value;
+                let phone = document.getElementById("phone").value;
+                let email = document.getElementById("email").value;
+                let sem = document.getElementById("sem").value;
+                let sec = document.getElementById("sec").value;
+                let cgpa = document.getElementById("cgpa").value;
+
+                document.getElementById("output").innerHTML = 
+                    "<h2> Hi, " + name + "!</h2>" +
+                    "<br>" + 
+                    "<h4> Your Age: " + age + "</h4>" +
+                    "<br><br>" + 
+                    "<h4> Your Phone Number: " + phone + "</h4>" +
+                    "<br>" + 
+                    "<h4> Your Email: " + email + "</h4>" +
+                    "<br>" + 
+                    "<h4> Your Semester: " + sem + "</h4>" +
+                    "<br>" + 
+                    "<h4> Your Section: " + sec + "</h4>" +
+                    "<br>" + 
+                    "<h4> Your CGPA: " + cgpa + "</h4>" +
+                    "<br>";
+            
+            }
+
+            console.log("User Name: " + name);
+            console.log("User Age: " + age);
+            console.log("User Phone: " + phone);
+            console.log("User Email: " + email);
+            console.log("User Semester: " + sem);
+            console.log("User Section: " + sec);
+            console.log("User CGPA: " + cgpa);
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Symbiosis Institute of Technology</h1>
+            <h2>Computer Science and Engineering</h3>
+            <h4>Fill the form below</h4>
+        </div>
+        <div class="form">
+            <label class="label">Enter Name: </label>
+            <input type="text" id="name" placeholder="John Doe" class="input">
+            <br><br>
+            <label class="label">Enter Age: </label>
+            <input type="number" id="age" placeholder="18" class="input">
+            <br><br>
+            <label class="label">Enter Phone Number: </label>
+            <input type="phone" id="phone" placeholder="9999999999" class="input">
+            <br><br>
+            <label class="label">Enter Email: </label>
+            <input type="email" id="email" placeholder="example@mail.com" class="input">
+            <br><br>
+            <label class="label">Enter Semester: </label>
+            <input type="number" id="sem" class="input">
+            <br><br>
+            <label class="label">Enter Section: </label>
+            <input type="text" id="sec" class="input">
+            <br><br>
+            <label class="label">Enter CGPA: </label>
+            <input type="number" id="cgpa" class="input">
+            <br><br>
+            <button onclick="welcomeStudent(); greet();">Submit</button>
+        </div>
+        <br><br>
+        <hr>
+        <div id="output" class="output"></div>
+        <br><br>
+	    <h3>Designed by Arunima Das, PRN: 24070521007</h3>
+        <script src="FormScript.js"></script>
+    </body>
+</html>

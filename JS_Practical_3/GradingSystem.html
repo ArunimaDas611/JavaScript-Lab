@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Grading System</title>
+        <style>
+            body {
+                background-color: white;
+                color:rgb(252, 40, 40);
+            }
+
+            .header{
+                background-color: rgb(252, 40, 40);
+                color: white;
+                align-content: center;
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: 10px;
+                box-shadow: rgb(0, 0, 0);
+            }
+
+            h2 {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            h3 {
+                font-family:'Times New Roman', Times, serif;
+            }
+
+            .form {
+                background-color: rgb(37, 61, 167);
+                padding: 10px;
+                border-radius: 20px;
+                margin-left: 23%;
+                margin-right: 23%;
+                margin-top: 10px;
+                box-shadow: rgb(0, 0, 0);
+            }
+            
+            label {
+                margin-left: 20px;
+                font-size: 25px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: rgb(211, 203, 203);
+            }
+
+            input {
+                margin-left: 5px;
+                border-radius: 5px;
+                box-shadow: rgb(0, 0, 0);
+            }
+
+            .btn {
+                margin-top: 10px;
+                padding: 5px;
+                text-align: center;
+            }
+
+            button {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+            }
+
+            .output {
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h2>Symbiosis Institute of Technology, Nagpur</h2>
+            <h3>Student Grading System</h3>
+        </div>
+        <br>
+        <strong style="font-size: 25px; font-family:'Times New Roman', Times, serif; margin-left: 44%;">Enter the details below</strong>
+        <br><br>
+        <div class="form">
+            <label>Name: </label>
+            <input type="name" id="name">
+            <br><br>
+            <label>Semester: </label>
+            <input type="number" id="sem">
+            <br><br>
+            <label>Seat No: </label>
+            <input type="number" id="sno">
+            <br><br>
+            <label>Marks: </label>
+            <input type="number" id="marks">
+        </div>
+        <div class="btn">
+        <button onclick="gradeSystem();">Submit</button>
+        </div>
+        <hr>
+        <br>
+        <div id="output" class="output"></div>
+        <h3>Designed By: Arunima Das, PRN: 24070521007</h3>
+        <script src="GradeScript.js"></script>
+    </body>
+</html>

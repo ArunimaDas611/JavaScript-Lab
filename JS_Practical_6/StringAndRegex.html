@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>String Methods and Regular Expressions</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            border: 1px solid black;
+            background-color: rgba(255, 174, 0, 0.8);
+            backdrop-filter: blur(15%);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea{
+            padding: 10px;
+            margin: 5px 0;
+            width: 90%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            color: white;
+            width: 150px;
+            cursor: pointer;
+            font-size: 15px;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            background-color: rgb(240, 14, 14);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        button:hover {
+            background-color: rgb(208, 15, 15);
+            transform: scale(1.05);
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgb(24, 179, 127, 0.8);
+            background-clip: blur(15%);
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to bottom, rgb(243, 179, 39), yellow);">
+    <h1>String Methods and Regular Expressions</h1>
+    <div class="box">
+        <label><b>Enter a paragraph: </b></label><br>
+        <textarea id="para" rows=5 placeholder="Lorem ipsum..."></textarea>
+        <br><br>
+        <label><b>Enter Email: </b></label><br>
+        <input type="text" id="email" placeholder="johndoe@email.com">
+        <br><br>
+        <label><b>Find and Replace</b></label><br>
+        <input type="text" id="find">
+        <input type="text" id="replace">
+        <br><br>
+        <button onclick = "processString();"><b>Process</b></button>
+    </div>
+    <div class="output" id="output"></div>
+    <script src="StringScript.js"></script>
+    <h3>Designed By Arunima Das, PRN: 24070521007</h3>
+</body>
+</html>
