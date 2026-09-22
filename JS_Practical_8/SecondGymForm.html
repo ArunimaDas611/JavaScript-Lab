@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Admission Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Bree+Serif&family=Playwrite+BR+Guides&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Bree Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            background: #2e2d2d;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 40px auto;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px black;
+      
+        }
+
+        .form-group {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 5rem;
+        }
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        label {
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        
+        .g-label {
+            margin-left: 2px;
+        }
+
+        input, select, textarea{
+            margin-left: 5px;
+            padding: 4px;
+            border-radius: 3px;
+        }
+
+        .error {
+            display: block;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 13px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #e77416;
+            font-family: "Bree Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <h2>Gym Admission Form</h2>
+        <form id="gymForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name">
+                <span id="nameError" class="error"></span> 
+
+                <label>Age</label>
+                <input type="number" id="age">
+                <span id="ageError" class="error"></span>
+
+                <label>Email</label>
+                <input type="text" id="email">
+                <span id="emailError" class="error"></span>
+
+                <label>Mobile Number</label>
+                <input type="text" id="mobile">
+                <span id="mobileError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="bday">
+                <span id="dateError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label style="margin-right:15px;">Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="g-label">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label class="g-label">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label class="g-label">Other</label>
+            </div>
+            <div class="form-group">
+                <label>Weight (in kgs)</label>
+                <input type="number" step=0.1 id="weight">
+                <span id="weightError" class="error"></span>
+                <label>Height (in cm)</label>
+                <input type="number" step=0.1 id="height">
+                <span id="heightError" class="error"></span>
+                <label>BMI</label>
+                <input type="number" step="0.1" id="bmi">
+                <span id="bmiError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Medical Conditions or Alllergies?</label>
+                <input type="radio" name="cond" id="ailment" value="yes">
+                <label class="g-label">Yes</label>
+                <input type="radio" name="cond" id="noailment" value="no">
+                <label class="g-label">No</label>
+            </div>
+            <div class="form-group">  
+                <label>If Yes, please provide details:</label>
+                <textarea rows="3" columns="15" id="details"></textarea>
+                <span id="detailsError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Membership Plan</label>
+                <select id="plan">
+                    <option value="">Select Plan</option>
+                    <option>Monthly</option>
+                    <option>Quarterly</option>
+                    <option>Yearly</option>
+                </select><br>
+                <span id="planError" class="error"></span>
+
+                <label>Preferred Start Date</label>
+                <input type="date" id="sday">
+                <span id="date2Error" class="error"></span>
+            </div>
+            <button id=submit type="submit">Submit</button>
+            </form>
+            <strong>
+                <p id="result" class="success"></p>
+            </strong>
+        </form>
+    </div>
+    <script src="SecondGymScript.js"></script>
+</body>
+</html>
