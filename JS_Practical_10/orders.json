@@ -1,0 +1,50 @@
+[
+  {
+    "order_id": 1,
+    "c_name": "Carlo Romano",
+    "food_item": "Pizza",
+    "quantity": 1,
+    "total_amt": 60,
+    "status": "Delivered"
+  },
+  {
+    "order_id": 2,
+    "c_name": "Iggy",
+    "food_item": "Blueberry Donut",
+    "quantity": 2,
+    "total_amt": 80,
+    "status": "Delivered"
+  },
+  {
+    "order_id": 3,
+    "c_name": "Cecilia",
+    "food_item": "Burger",
+    "quantity": 1,
+    "total_amt": 40,
+    "status": "Ready"
+  },
+  {
+    "order_id": 4,
+    "c_name": "Greg",
+    "food_item": "Beef Taco",
+    "quantity": 1,
+    "total_amt": 40,
+    "status": "Preparing"
+  },
+  {
+    "order_id": 5,
+    "c_name": "Peggy",
+    "food_item": "Buffalo Wings",
+    "quantity": 4,
+    "total_amt": 100,
+    "status": "Preparing"
+  },
+  {
+    "order_id": "6",
+    "c_name": "Arunima Das",
+    "food_item": "Chicken Tikka",
+    "quantity": "2",
+    "total_amt": "120",
+    "status": "Ready"
+  }
+]

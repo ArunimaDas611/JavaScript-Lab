@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form with Fetch</title>
+    <style>
+        h2 {
+            text-align:center;
+        }
+
+        .form {
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            background-color: bisque;
+            border-radius: 8px;
+            width: 400px;
+            margin: 40px auto;
+        }
+
+        form {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 25px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input {
+            font-size: 14px;
+        }
+
+        button {
+            margin: 20px;
+            font-size: 12px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <div class="form">
+        <form>
+            <label>Employee ID</label><br>
+            <input type="number" id="id"><br><br>
+            <label>Employee Name</label><br>
+            <input type="text" id="name"><br><br>
+            <label>Department</label><br>
+            <input type="text" id="dept"><br><br>
+            <label>Salary</label><br>
+            <input type="number" id="sal">
+        </form>
+        <button onclick="addEmp();">Submit</button>
+    </div>
+    <table id="empTable">    
+    </table>
+    <script src="EmployeeScript.js"></script>
+</body>
+</html>

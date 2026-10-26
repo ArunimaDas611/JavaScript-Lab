@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load JSON using Fetch</title>
+    <style>
+        body {
+            background-color: rgb(219, 201, 201);
+        }
+
+        form {
+            text-align: center;
+            margin: 8px;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 215px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            background-color: whitesmoke;
+        }
+
+        th {
+            background-color: rgb(187, 141, 141);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #111;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: rgb(187, 141, 141);
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .loadBtn button{
+            margin-left: 38rem;
+            width: 20%;
+            padding: 8px;
+            margin-top: 15px;
+            background: rgb(187, 141, 141);
+            color: black;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Details using fetch()</h2>
+    <div class="loadBtn">
+    <button onclick="loadStudents();">Load Students</button>
+    </div>
+    <div class="container">
+    <form>
+        <label>ID</label><br>
+        <input type="number" id="id"><br><br>
+        <label>Student Name</label><br>
+        <input type="text" id="name"><br><br>
+        <label>Department</label><br>
+        <input type="text" id="dept"><br><br>
+        <label>Marks</label><br>
+        <input type="number" id="marks"><br><br>
+    </form>
+    <button onclick="addToJSON();">Submit</button>
+    </div>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Marks</th>
+            <tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="FetchScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON using jQuery</title>
+    <style>
+
+        h2 {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 70%;
+            margin-top: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid #b0b7c3;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        th, td {
+            border-bottom: 1px solid #d5dae2;
+            border-right: 1px solid #d5dae2;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-right: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        th {
+            background: linear-gradient(135deg, #4a6fa5, #2f4b7c);
+            color: white;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f5fa;
+        }
+
+        tbody tr:hover {
+            background-color: #dfe8f5;
+            transition: background-color 0.2s ease;
+        }
+
+        button {
+            padding: 10px 22px;
+            font-size: 16px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #4a6fa5, #2f4b7c);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <button id="loadBtn">Load</button>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="JQueryScript.js"></script>
+</body>
+</html>
