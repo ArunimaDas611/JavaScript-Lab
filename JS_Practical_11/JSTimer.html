@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Countdown</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f5f3ee;
+      color: #222;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .container {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      border-radius: 20px;
+      padding: 30px 50px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);   
+    }
+
+    h2 {
+        text-align: center;
+    }
+ 
+    #countdown {
+      font-family: "Courier New", monospace;
+      font-size: 5rem;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 16px 36px;
+    }
+
+    #countdown.warning {
+      color: #c62828;
+    }
+
+    #timeup {
+        color:rgb(208, 8, 8);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #notice {
+      color: #c62828;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    button {
+      font-size: 1.1rem;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 6px;
+      background: #2e7d32;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #stopBtn {
+      font-size: 1.1rem;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 6px;
+      background: #e94c3b;
+      color: #fff;
+      cursor: pointer;
+    }
+ 
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+ 
+    button:focus-visible {
+      outline: 3px solid #1565c0;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>JavaScript Lab starts in:</h2>
+  <div id="countdown">00:30</div>
+  </div>
+  <button id="startBtn">Start</button>
+  <button id="stopBtn" disabled>Stop</button>
+  <h3 id="notice"></h3>
+  <h2 id="timeup"><h2>
+  <script type="module">
+    import {SECONDS, WARNING, tick} from './TimerScript.js';
+
+    const countdownEl = document.getElementById("countdown");
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById('stopBtn');
+    const timeup = document.getElementById('timeup');
+    const notice = document.getElementById('notice');
+
+    let remaining = SECONDS;
+    let intervalId = null;
+    let timeoutId = null;
+
+    startBtn.addEventListener("click", function () {
+      if (intervalId !== null) return;
+      
+      intervalId = setInterval(function () {
+        remaining = tick(countdownEl, notice, timeup, remaining, intervalId)
+      }, 1000);
+
+      const delay = (SECONDS - WARNING) * 1000;
+      timeoutId = setTimeout(showWarning, delay);
+
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
+  });
+
+  function showWarning() {
+    countdownEl.classList.add("warning");
+  }
+
+  stopBtn.addEventListener('click', function () {
+    clearInterval(intervalId);
+    intervalId = null;
+
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+  });
+ 
+  show(countdownEl, remaining);
+</script>
+</body>
+</html>
